@@ -1,0 +1,4 @@
+#! /bin/sh
+gfortran -c introduction.f90 integrals_module.f90 library.f90 elconfig_module.f90 initstate_module.f90 elconf_generator.f90 spin_tensor_coefficients_module.f90 spin_tensor_bottom_level_module.f90 spin_tensor_medium_level.f90 spin_tensor_up_level.f90 cases.f90 diagonal.f90 V_element.f90 vergleich.f90 sub_eta_coefficients.f90 zero_order_evp.f90 main.f90
+gfortran -o STMRFOPPA.exe introduction.o integrals_module.o library.o elconfig_module.o initstate_module.o elconf_generator.o spin_tensor_coefficients_module.o spin_tensor_bottom_level_module.o spin_tensor_medium_level.o spin_tensor_up_level.o cases.o diagonal.o V_element.o vergleich.o sub_eta_coefficients.o zero_order_evp.o main.o -L/usr/lib/lapack -llapack -L/usr/lib/libblas -lblas
+rm *.o *.mod
